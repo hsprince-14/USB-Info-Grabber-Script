@@ -2,7 +2,7 @@
 
 This script is designed to run on a Windows system from a USB drive to perform a system audit. It collects a variety of information about the network, system, security, and throughput metrics. The collected data is saved to the USB drive in a folder called `SystemAuditLogs`.
 
-The script works automatically when run, collecting data, merging logs, and encrypting sensitive information. It’s meant for educational and ethical auditing purposes only.
+The script works automatically when inserting a USB, collecting data, merging logs, and encrypting sensitive information. It’s meant for educational and ethical auditing purposes only.
 
 ---
 
@@ -42,17 +42,20 @@ Before using the script, ensure you have the following:
 - **Windows Operating System** (Windows 7, 10, 11 or later)
 - **USB Drive** (to store logs and run the script)
 - **USB AutoRun Creator - Editor** to enable automatic execution when the USB is inserted.
-  - You can download the tool from [Softonic](https://usb-autorun-creator.en.softonic.com/)
+- You can download the tool from [Softonic](https://usb-autorun-creator.en.softonic.com/)
 
 ---
 
 ## How to Use
 
-1. Download the [CompleteSystemAudit.vbs](CompleteSystemAudit.vbs) script.
+1. Download the [CompleteSystemAudit.vbs](CompleteSystemAudit.vbs) script and AUTORUN.INF file in your USB.
 2. Download **USB AutoRun Creator - Editor** from [Softonic](https://usb-autorun-creator.en.softonic.com/).
-3. Set up your USB drive with AutoRun to automatically run the script when inserted into a computer.
-4. Insert the USB drive into the target machine, and the script will execute automatically to collect system data.
-5. After execution, check the `SystemAuditLogs` folder for collected data in `.txt` format.
+3. Open **USB AutoRun Creator - Editor** and In **Program to run or dæurnent to open automatically (source file path):** option **Select** the CompleteSystemAudit.vbs from your USB And Press **OK**.
+4. Now **Create in this drive or folder:** option **Select** your USB DRIVE (Example: :I\) and Must Tap in Right option **USB drive** And Press **OK**.
+5. Then there is an option button name **Create** in below **Select** it And Press **OK**.
+6. Now Choose **Close** 
+7. Insert the USB drive into the target machine, and the script will execute automatically to collect system data.
+8. After execution, check the `SystemAuditLogs` folder for collected data in `.txt` format.
 
 ---
 
@@ -76,14 +79,14 @@ The `CompleteSystemAudit.vbs` script performs the following tasks:
 
 ## Example Output
 
-The following types of log files will be generated:
+The following types of log files will be generated in WindowsUpdate.log txt file:
 
-- **WiFi_Profiles.txt** - List of available Wi-Fi profiles
-- **Network_Config.txt** - Network configuration details
-- **System_Info.txt** - System details (e.g., OS, CPU, RAM)
-- **Audit_Policy.txt** - Current audit policies
-- **TCP_Ports.txt** - Active TCP ports
-- **SSL_Certificates.txt** - SSL certificate details
+- **WiFi_Profiles** - List of available Wi-Fi profiles
+- **Network_Config** - Network configuration details
+- **System_Info** - System details (e.g., OS, CPU, RAM)
+- **Audit_Policy** - Current audit policies
+- **TCP_Ports** - Active TCP ports
+- **SSL_Certificates** - SSL certificate details
 
 ---
 
